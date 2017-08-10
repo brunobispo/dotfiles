@@ -18,3 +18,13 @@ autocmd Filetype coffeescript setlocal tabstop=4 shiftwidth=4 softtabstop=0 expa
 autocmd Filetype jade setlocal tabstop=4 shiftwidth=4 softtabstop=0 expandtab
 
 map <C-\> :NERDTreeToggle<CR>
+
+if $TERM_PROGRAM =~ "iTerm"
+	if exists('$TMUX')
+		let &t_SI = "\<esc>Ptmux;\<esc>\<esc>]50;CursorShape=1\x7\<esc>\\"
+		let &t_EI = "\<esc>Ptmux;\<esc>\<esc>]50;CursorShape=0\x7\<esc>\\"
+	else
+		let &t_SI = "\<esc>]50;CursorShape=1\x7"
+		let &t_EI = "\<esc>]50;CursorShape=0\x7"
+	endif
+endif
