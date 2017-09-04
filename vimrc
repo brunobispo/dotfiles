@@ -13,6 +13,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'junegunn/vim-slash'
 Plugin 'gregsexton/MatchTag'
+Plugin 'Yggdroot/indentLine'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
