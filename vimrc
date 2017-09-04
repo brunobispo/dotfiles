@@ -12,6 +12,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'junegunn/vim-slash'
+Plugin 'gregsexton/MatchTag'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
