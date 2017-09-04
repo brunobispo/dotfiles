@@ -6,7 +6,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'wincent/command-t'
 Plugin 'tpope/vim-haml'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-ruby/vim-ruby'
