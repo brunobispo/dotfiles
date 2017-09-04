@@ -11,6 +11,7 @@ Plugin 'tpope/vim-haml'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'junegunn/vim-slash'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
