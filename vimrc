@@ -10,6 +10,7 @@ Plugin 'wincent/command-t'
 Plugin 'tpope/vim-haml'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
