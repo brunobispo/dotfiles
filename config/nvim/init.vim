@@ -1,23 +1,14 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'wincent/command-t'
-Plugin 'tpope/vim-haml'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'junegunn/vim-slash'
-Plugin 'gregsexton/MatchTag'
-Plugin 'Yggdroot/indentLine'
-
-call vundle#end()            " required
-filetype plugin indent on    " required
-syntax on
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-haml'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'vim-ruby/vim-ruby'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'junegunn/vim-slash'
+Plug 'gregsexton/MatchTag'
+Plug 'Yggdroot/indentLine'
+call plug#end()
 
 set nocompatible
 set smartindent
