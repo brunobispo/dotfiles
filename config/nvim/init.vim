@@ -8,6 +8,10 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/vim-slash'
 Plug 'gregsexton/MatchTag'
 Plug 'Yggdroot/indentLine'
+Plug 'mhartington/oceanic-next'
+Plug 'pangloss/vim-javascript'
+Plug 'w0rp/ale'
+Plug 'mxw/vim-jsx'
 call plug#end()
 
 set nocompatible
@@ -18,6 +22,26 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
+set nowrap
+
+" For Neovim 0.1.3 and 0.1.4
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" Or if you have Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" Enable lint for React components
+let g:jsx_ext_required = 0
+
+let g:ale_linters = {
+\   'javascript': ['flow', 'jscs', 'jshint', 'standard', 'xo'],
+\}
+
+" Theme
+syntax enable
+colorscheme OceanicNext
 
 autocmd Filetype coffeescript setlocal tabstop=4 shiftwidth=4 softtabstop=0 expandtab
 autocmd Filetype scss setlocal tabstop=4 shiftwidth=4 softtabstop=0 expandtab

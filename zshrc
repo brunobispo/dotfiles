@@ -1,5 +1,10 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:/home/linuxbrew/.linuxbrew/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/home/linuxbrew/.linuxbrew/bin:/opt/android-studio/bin:$PATH
+
+# Adroid
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -85,3 +90,6 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 hash -d host=$HOST_USER_PATH
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
