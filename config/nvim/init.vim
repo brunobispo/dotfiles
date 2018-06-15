@@ -36,6 +36,13 @@ if (has("termguicolors"))
  set termguicolors
 endif
 
+" don't render special chars (tabs, trails, ...)
+set nolist
+" lazy drawing
+set lazyredraw
+set ttyfast
+
+
 " Enable lint for React components
 let g:jsx_ext_required = 0
 
