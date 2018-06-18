@@ -13,7 +13,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
 Plug 'mxw/vim-jsx'
 Plug 'styled-components/vim-styled-components'
-Plug 'tpope/vim-sleuth'
 call plug#end()
 
 set nocompatible
