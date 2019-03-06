@@ -59,6 +59,8 @@ let g:ale_fixers = {
 \   ],
 \}
 
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 " Increase max ctrlp depth
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=100
