@@ -15,7 +15,10 @@ Plug 'mxw/vim-jsx'
 Plug 'styled-components/vim-styled-components'
 Plug 'tpope/vim-fugitive'
 Plug 'elixir-editors/vim-elixir'
-Plug 'gorkunov/smartgf.vim'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 set nocompatible
@@ -30,6 +33,10 @@ set nowrap
 set clipboard+=unnamedplus
 set notimeout
 set mouse=a
+set noshowmode
+set hidden
+set nobackup
+set nowritebackup
 
 " For Neovim 0.1.3 and 0.1.4
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -55,10 +62,20 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
 \   'ruby': [
-\       'remove_trailing_lines',
 \       'rubocop'
 \   ],
+\   'javascript': [
+\       'prettier'
+\   ],
+\   'scss': [
+\       'prettier'
+\   ]
 \}
+
+let g:ale_fix_on_save = 1
+
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
@@ -67,10 +84,23 @@ let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=100
 
 " Theme
-syntax enable
-colorscheme OceanicNext
+let g:tmuxline_powerline_separators = 0
+let g:lightline = {'colorscheme': 'molokai'}
 
-autocmd Filetype coffeescript setlocal tabstop=4 shiftwidth=4 softtabstop=0 expandtab
-autocmd Filetype scss setlocal tabstop=4 shiftwidth=4 softtabstop=0 expandtab
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_invert_selection=0
+
+set background=dark
+if &term=~'linux'
+  colorscheme default
+else
+  colorscheme gruvbox
+endif
 
 map <C-\> :NERDTreeToggle<CR>
+
+" Coc
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
