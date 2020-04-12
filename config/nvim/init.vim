@@ -1,24 +1,16 @@
 call plug#begin('~/.config/nvim/autoload')
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
-Plug 'tpope/vim-haml'
 Plug 'tpope/vim-surround'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-ruby/vim-ruby'
-Plug 'junegunn/vim-slash'
 Plug 'gregsexton/MatchTag'
 Plug 'Yggdroot/indentLine'
-Plug 'mhartington/oceanic-next'
-Plug 'pangloss/vim-javascript'
-Plug 'w0rp/ale'
-Plug 'mxw/vim-jsx'
-Plug 'styled-components/vim-styled-components'
-Plug 'tpope/vim-fugitive'
-Plug 'elixir-editors/vim-elixir'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'morhetz/gruvbox'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-fugitive'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'mileszs/ack.vim'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 set nocompatible
