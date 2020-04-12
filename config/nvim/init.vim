@@ -44,31 +44,7 @@ set nolist
 set lazyredraw
 set ttyfast
 
-
-" Enable lint for React components
-let g:jsx_ext_required = 0
-
-let g:ale_linters = {
-\   'javascript': ['flow', 'jscs', 'jshint', 'standard', 'xo'],
-\}
-
-let g:ale_fixers = {
-\   'ruby': [
-\       'rubocop'
-\   ],
-\   'javascript': [
-\       'prettier'
-\   ],
-\   'scss': [
-\       'prettier'
-\   ]
-\}
-
-let g:ale_fix_on_save = 1
-
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
+" Ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " Increase max ctrlp depth
