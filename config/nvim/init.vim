@@ -1,20 +1,45 @@
+" Plugins {{{
 call plug#begin('~/.config/nvim/autoload')
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'gregsexton/MatchTag'
-Plug 'Yggdroot/indentLine'
-Plug 'morhetz/gruvbox'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
+Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'mileszs/ack.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'morhetz/gruvbox'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'dpelle/vim-LanguageTool'
 call plug#end()
+" }}}
 
-set nocompatible
-set smartindent
+" Indent Guides {{{
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_color_change_percent = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+" }}}
+
+" General {{{
+"set clipboard=unnamed                | " System clipboard
+set clipboard+=unnamedplus
+set encoding=UTF-8                   | " Default file encoding
+set hidden                           | " Make buffers hidden then abandoned
+set noautochdir                      | " Don't change dirs automatically
+set noerrorbells                     | " No sound
+set signcolumn=yes                   | " Show signcolumns
+set splitbelow splitright            | " Split defaults
+set undofile                         | " Enable undo persistence across sessions
+set smartindent                      | " Auto indent new lines
+set spelllang=en                     | " Spell checking
 set autoindent
 set number
 set shiftwidth=2
@@ -22,56 +47,69 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 set nowrap
-set clipboard+=unnamedplus
 set notimeout
 set mouse=a
 set noshowmode
-set hidden
-set nobackup
-set nowritebackup
+set foldmethod=marker
+" }}}
 
-" For Neovim 0.1.3 and 0.1.4
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" Shortcuts {{{
+let mapleader = ","
+let maplocalleader = ","
 
-" Or if you have Neovim >= 0.1.5
-if (has("termguicolors"))
- set termguicolors
-endif
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" don't render special chars (tabs, trails, ...)
-set nolist
-" lazy drawing
-set lazyredraw
-set ttyfast
+nnoremap <leader>\ :NERDTreeToggle<cr>
+nnoremap <leader>\| :NERDTreeFind<cr>
 
-" Ctrlp
+nnoremap <leader>ff :call CocAction('runCommand', 'eslint.executeAutofix')<cr>
+nnoremap <leader>fp :call CocAction('runCommand', 'prettier.formatFile')<cr>
+nnoremap <leader>fj :%!python -m json.tool<cr>
+
+iabbrev @@ me@brunobispo.com
+
+inoremap jk <esc>
+inoremap <esc> <nop>
+
+" Prevent jump when search *
+nnoremap * *``
+" }}}
+
+" CtrlP {{{
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " Increase max ctrlp depth
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=100
+let g:ctrlp_dotfiles = 0
+" }}}
 
-" Theme
-let g:tmuxline_powerline_separators = 0
-let g:lightline = {'colorscheme': 'molokai'}
-
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_invert_selection=0
-
+" Theme {{{
 set background=dark
-if &term=~'linux'
-  colorscheme default
-else
-  colorscheme gruvbox
-endif
+let base16colorspace=256
+set termguicolors
+colorscheme gruvbox
+set noshowmode
+set novisualbell
+set nowrap
+set number
+set showmatch
+highlight Comment gui=italic,bold
+" }}}
 
-map <C-\> :NERDTreeToggle<CR>
-
+" AG {{{
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+" }}}
 
-" Coc
+" Airline {{{
+" let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+" }}}
+
+" Conquer of Completion {{{
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
@@ -185,3 +223,17 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+" Some servers have issues with backup files
+set nobackup
+set nowritebackup
+" Remove messages from in-completion menus
+set shortmess+=c
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+" Colors
+highlight CocCodeLens gui=italic,bold guifg=#505050
+" }}}
+
+" Language Tool {{{
+let g:languagetool_jar = '/usr/local/Cellar/languagetool/4.9.1/libexec/languagetool-commandline.jar'
+" }}}
