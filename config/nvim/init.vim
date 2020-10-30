@@ -63,7 +63,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>\ :NERDTreeToggle<cr>
 nnoremap <leader>\| :NERDTreeFind<cr>
 
-nnoremap <leader>ff :call CocAction('runCommand', 'eslint.executeAutofix')<cr>
+nnoremap <leader>ff :call CocActionAsync('format')<cr>
 nnoremap <leader>fp :call CocAction('runCommand', 'prettier.formatFile')<cr>
 nnoremap <leader>fj :%!python -m json.tool<cr>
 
