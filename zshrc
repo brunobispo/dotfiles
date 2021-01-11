@@ -81,16 +81,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Rbenv
-eval "$(rbenv init -)"
-
 export DEFAULT_USER=$(whoami)
 
-# export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export ANDROID_HOME=$HOME/Library/Android/sdk
-
-# fnm
-export PATH=/Users/brunobispo/.fnm:$PATH
-eval "`fnm env --multi`"
+# Asdf
+. $(brew --prefix asdf)/asdf.sh
