@@ -89,6 +89,7 @@ let g:ctrlp_dotfiles = 0
 set background=dark
 let base16colorspace=256
 set termguicolors
+let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 set noshowmode
 set novisualbell
