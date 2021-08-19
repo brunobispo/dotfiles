@@ -235,6 +235,16 @@ set updatetime=300
 highlight CocCodeLens gui=italic,bold guifg=#505050
 " }}}
 
+" indentLine {{{
+let g:indentLine_setConceal = 2
+" default ''.
+" n for Normal mode
+" v for Visual mode
+" i for Insert mode
+" c for Command line editing, for 'incsearch'
+let g:indentLine_concealcursor = ""
+" }}}
+
 " Language Tool {{{
 let g:languagetool_jar = '/usr/local/Cellar/languagetool/4.9.1/libexec/languagetool-commandline.jar'
 " }}}
