@@ -84,4 +84,4 @@ fi
 export DEFAULT_USER=$(whoami)
 
 # Asdf
-. /usr/local/opt/asdf/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
