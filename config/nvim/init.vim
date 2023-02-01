@@ -1,7 +1,6 @@
 " Plugins {{{
 call plug#begin('~/.config/nvim/autoload')
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'gregsexton/MatchTag'
