@@ -16,6 +16,8 @@ Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'dpelle/vim-LanguageTool'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 " }}}
 
@@ -65,6 +67,9 @@ nnoremap <leader>\| :NERDTreeFind<cr>
 nnoremap <leader>ff :call CocActionAsync('format')<cr>
 nnoremap <leader>fp :call CocAction('runCommand', 'prettier.formatFile')<cr>
 nnoremap <leader>fj :%!python -m json.tool<cr>
+
+nnoremap <leader>p :Files<cr>
+nnoremap <leader>P :History<cr>
 
 iabbrev @@ me@brunobispo.com
 
