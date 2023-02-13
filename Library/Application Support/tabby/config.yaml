@@ -186,8 +186,12 @@ terminal:
       - '#578e57'
       - '#e6d4a3'
   customColorSchemes: []
-  font: Hack Nerd Font
-  ligatures: true
+  background: colorScheme
+  cursorBlink: false
+  minimumContrastRatio: 0
+  font: Hasklig
+  fontSize: 13
+  altIsMeta: true
 ssh: {}
 configSync:
   parts: {}
