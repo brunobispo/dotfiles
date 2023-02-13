@@ -1,8 +1,7 @@
 version: 3
 profiles: []
 hotkeys:
-  toggle-window:
-    - Ctrl-Space
+  toggle-window: []
   copy-current-path: []
   ctrl-c:
     - Ctrl-C
@@ -58,8 +57,7 @@ hotkeys:
   settings-tab: {}
   settings:
     - ⌘-,
-  serial:
-    - Alt-K
+  serial: []
   restart-serial-session: []
   new-window:
     - ⌘-N
