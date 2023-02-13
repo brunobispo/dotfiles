@@ -67,6 +67,7 @@ nnoremap <leader>\| :NERDTreeFind<cr>
 nnoremap <leader>ff :call CocActionAsync('format')<cr>
 nnoremap <leader>fp :call CocAction('runCommand', 'prettier.formatFile')<cr>
 nnoremap <leader>fj :%!python -m json.tool<cr>
+nnoremap <leader>cp :let @+ = expand("%")<cr>
 
 nnoremap <leader>p :Files<cr>
 nnoremap <leader>P :History<cr>
