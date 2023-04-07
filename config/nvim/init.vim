@@ -9,8 +9,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'mileszs/ack.vim'
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
@@ -115,10 +117,20 @@ endif
 let g:airline#extensions#tabline#enabled = 1
 " }}}
 
+" Commentary {{{
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  context_commentstring = {
+    enable = true
+  }
+}
+EOF
+" }}}
+
 " Conquer of Completion {{{
 
 " Install extensions
-let g:coc_global_extensions=[ 'coc-cssmodules', 'coc-prettier', 'coc-css', 'coc-tsserver', 'coc-omnisharp' ]
+let g:coc_global_extensions=[ 'coc-cssmodules', 'coc-prettier', 'coc-css', 'coc-tsserver', 'coc-omnisharp', 'coc-eslint']
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
