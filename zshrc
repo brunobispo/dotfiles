@@ -87,3 +87,6 @@ export DEFAULT_USER=$(whoami)
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 . ~/.asdf/plugins/java/set-java-home.zsh
 . ~/.asdf/plugins/dotnet-core/set-dotnet-home.zsh
+
+# Secrets
+. ~/.secrets.sh

@@ -4,15 +4,13 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'gregsexton/MatchTag'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'mileszs/ack.vim'
-" Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring', { 'branch': 'main' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
@@ -20,6 +18,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'dpelle/vim-LanguageTool'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'madox2/vim-ai', { 'branch': 'main' }
 call plug#end()
 " }}}
 
@@ -130,7 +129,7 @@ EOF
 " Conquer of Completion {{{
 
 " Install extensions
-let g:coc_global_extensions=[ 'coc-cssmodules', 'coc-prettier', 'coc-css', 'coc-tsserver', 'coc-omnisharp', 'coc-eslint']
+let g:coc_global_extensions=[ 'coc-cssmodules', 'coc-prettier', 'coc-css', 'coc-tsserver', 'coc-omnisharp', 'coc-eslint', 'coc-svg']
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
