@@ -130,7 +130,7 @@ EOF
 " Conquer of Completion {{{
 
 " Install extensions
-let g:coc_global_extensions=[ 'coc-cssmodules', 'coc-prettier', 'coc-css', 'coc-tsserver', 'coc-omnisharp', 'coc-eslint']
+let g:coc_global_extensions=[ 'coc-cssmodules', 'coc-prettier', 'coc-css', 'coc-tsserver', 'coc-omnisharp', 'coc-eslint', 'coc-svg']
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
