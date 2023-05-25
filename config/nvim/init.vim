@@ -18,6 +18,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'dpelle/vim-LanguageTool'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'madox2/vim-ai', { 'branch': 'main' }
 call plug#end()
 " }}}
 
