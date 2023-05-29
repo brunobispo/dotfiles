@@ -1,5 +1,5 @@
 " Plugins {{{
-call plug#begin('~/.config/nvim/autoload')
+call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
@@ -18,7 +18,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'dpelle/vim-LanguageTool'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'madox2/vim-ai', { 'branch': 'main' }
+Plug 'madox2/vim-ai'
+Plug 'github/copilot.vim'
 call plug#end()
 " }}}
 
