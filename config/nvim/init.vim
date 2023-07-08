@@ -54,6 +54,9 @@ set notimeout
 set mouse=a
 set noshowmode
 set foldmethod=marker
+
+" Disable comment continuation
+autocmd FileType * set formatoptions-=cro
 " }}}
 
 " Shortcuts {{{
