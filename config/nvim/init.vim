@@ -18,6 +18,9 @@ Plug 'dpelle/vim-LanguageTool'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'madox2/vim-ai'
+Plug 'evanleck/vim-svelte'
+Plug 'pangloss/vim-javascript'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'github/copilot.vim'
 call plug#end()
 " }}}
@@ -122,7 +125,7 @@ let g:airline#extensions#tabline#enabled = 1
 " Conquer of Completion {{{
 
 " Install extensions
-let g:coc_global_extensions=[ 'coc-cssmodules', 'coc-prettier', 'coc-css', 'coc-tsserver', 'coc-omnisharp', 'coc-eslint', 'coc-svg']
+let g:coc_global_extensions=[ 'coc-cssmodules', 'coc-prettier', 'coc-css', 'coc-tsserver', 'coc-omnisharp', 'coc-eslint', 'coc-svg', 'coc-svelte']
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
