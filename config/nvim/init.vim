@@ -9,7 +9,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-commentary'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'JoosepAlviste/nvim-ts-context-commentstring', { 'branch': 'main' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'morhetz/gruvbox'
@@ -118,16 +117,6 @@ endif
 " Airline {{{
 " let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-" }}}
-
-" Commentary {{{
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-  context_commentstring = {
-    enable = true
-  }
-}
-EOF
 " }}}
 
 " Conquer of Completion {{{
