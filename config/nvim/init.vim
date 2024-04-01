@@ -257,3 +257,14 @@ let g:NERDTreeMinimalMenu=1
 " Ignore node_modules files
 let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
 " }}}
+
+" vim-ai {{{
+" set default model and temperature
+let g:vim_ai_chat = {
+\  "options": {
+\    "model": "gpt-4-1106-preview",
+\    "max_tokens": 1000,
+\    "temperature": 0.5,
+\  }
+\}
+" }}}
