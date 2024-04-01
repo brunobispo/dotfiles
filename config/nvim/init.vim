@@ -252,3 +252,8 @@ let g:indentLine_concealcursor = ""
 " Fix incresing of command line size
 let g:NERDTreeMinimalMenu=1
 " }}}
+
+" FZF {{{
+" Ignore node_modules files
+let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
+" }}}
