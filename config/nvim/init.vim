@@ -2,20 +2,16 @@
 call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
-Plug 'vim-ruby/vim-ruby'
 Plug 'gregsexton/MatchTag'
 Plug 'tpope/vim-fugitive'
 Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-commentary'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'JoosepAlviste/nvim-ts-context-commentstring', { 'branch': 'main' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
-Plug 'dpelle/vim-LanguageTool'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'madox2/vim-ai'
@@ -83,15 +79,6 @@ inoremap <esc> <nop>
 nnoremap * *``
 " }}}
 
-" CtrlP {{{
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-
-" Increase max ctrlp depth
-let g:ctrlp_max_files=0
-let g:ctrlp_max_depth=100
-let g:ctrlp_dotfiles = 0
-" }}}
-
 " Theme {{{
 set background=dark
 let base16colorspace=256
@@ -115,16 +102,6 @@ endif
 " Airline {{{
 " let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-" }}}
-
-" Commentary {{{
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-  context_commentstring = {
-    enable = true
-  }
-}
-EOF
 " }}}
 
 " Conquer of Completion {{{
