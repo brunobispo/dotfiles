@@ -248,10 +248,6 @@ let g:indentLine_setConceal = 2
 let g:indentLine_concealcursor = ""
 " }}}
 
-" Language Tool {{{
-let g:languagetool_jar = '/usr/local/Cellar/languagetool/4.9.1/libexec/languagetool-commandline.jar'
-" }}}
-
 " NERDTree {{{
 " Fix incresing of command line size
 let g:NERDTreeMinimalMenu=1
