@@ -2,26 +2,30 @@
 call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
-Plug 'vim-ruby/vim-ruby'
 Plug 'gregsexton/MatchTag'
 Plug 'tpope/vim-fugitive'
 Plug 'Yggdroot/indentLine'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-commentary'
+<<<<<<< HEAD:config/nvim/prev.vim
 Plug 'JoosepAlviste/nvim-ts-context-commentstring', { 'branch': 'main' }
+=======
+>>>>>>> b5c664cce2ceadb7c8981a8d5ce81c23a236362d:config/nvim/init.vim
 Plug 'editorconfig/editorconfig-vim'
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
-Plug 'dpelle/vim-LanguageTool'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'madox2/vim-ai'
 Plug 'evanleck/vim-svelte'
+<<<<<<< HEAD:config/nvim/prev.vim
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'github/copilot.vim'
+=======
+>>>>>>> b5c664cce2ceadb7c8981a8d5ce81c23a236362d:config/nvim/init.vim
 call plug#end()
 " }}}
 
@@ -88,15 +92,6 @@ inoremap <esc> <nop>
 nnoremap * *``
 " }}}
 
-" CtrlP {{{
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-
-" Increase max ctrlp depth
-let g:ctrlp_max_files=0
-let g:ctrlp_max_depth=100
-let g:ctrlp_dotfiles = 0
-" }}}
-
 " Theme {{{
 set background=dark
 let base16colorspace=256
@@ -125,7 +120,12 @@ let g:airline#extensions#tabline#enabled = 1
 " Conquer of Completion {{{
 
 " Install extensions
+<<<<<<< HEAD:config/nvim/prev.vim
 let g:coc_global_extensions=[ 'coc-cssmodules', 'coc-prettier', 'coc-css', 'coc-tsserver', 'coc-omnisharp', 'coc-eslint', 'coc-svg', 'coc-svelte', '@yaegassy/coc-tailwindcss3']
+=======
+let g:coc_global_extensions=[ 'coc-cssmodules', 'coc-prettier', 'coc-css', 'coc-tsserver', 'coc-omnisharp', 'coc-eslint', 'coc-svg', 'coc-svelte']
+
+>>>>>>> b5c664cce2ceadb7c8981a8d5ce81c23a236362d:config/nvim/init.vim
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -251,6 +251,10 @@ set updatetime=300
 highlight CocCodeLens gui=italic,bold guifg=#505050
 " }}}
 
+" coc-css {{{
+autocmd FileType scss setl iskeyword+=@-@
+" }}}
+
 " indentLine {{{
 let g:indentLine_setConceal = 2
 " default ''.
@@ -261,24 +265,32 @@ let g:indentLine_setConceal = 2
 let g:indentLine_concealcursor = ""
 " }}}
 
-" Language Tool {{{
-let g:languagetool_jar = '/usr/local/Cellar/languagetool/4.9.1/libexec/languagetool-commandline.jar'
-" }}}
-
 " NERDTree {{{
 " Fix incresing of command line size
 let g:NERDTreeMinimalMenu=1
+" }}}
+
+" FZF {{{
+" Ignore node_modules files
+let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
 " }}}
 
 " vim-ai {{{
 " set default model and temperature
 let g:vim_ai_chat = {
 \  "options": {
+<<<<<<< HEAD:config/nvim/prev.vim
 \    "model": "gpt-4o",
+=======
+\    "model": "gpt-4-1106-preview",
+>>>>>>> b5c664cce2ceadb7c8981a8d5ce81c23a236362d:config/nvim/init.vim
 \    "max_tokens": 1000,
 \    "temperature": 0.5,
 \  }
 \}
+<<<<<<< HEAD:config/nvim/prev.vim
 
 let g:vim_ai_roles_config_file = 'Library/Mobile Documents/com~apple~CloudDocs/AI'
+=======
+>>>>>>> b5c664cce2ceadb7c8981a8d5ce81c23a236362d:config/nvim/init.vim
 " }}}
