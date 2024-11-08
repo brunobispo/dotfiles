@@ -1,0 +1,22 @@
+vim.opt.clipboard:append("unnamedplus")
+vim.opt.encoding = "UTF-8"
+vim.opt.hidden = true
+vim.opt.autochdir = false
+vim.opt.errorbells = false
+vim.opt.signcolumn = "yes"
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.undofile = true
+vim.opt.smartindent = true
+vim.opt.spelllang = "en"
+vim.opt.autoindent = true
+vim.opt.number = true
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.tabstop = 2
+vim.opt.expandtab = true
+vim.opt.wrap = false
+vim.opt.timeout = false
+vim.opt.mouse = "a"
+vim.opt.showmode = false
+vim.opt.foldmethod = "marker"

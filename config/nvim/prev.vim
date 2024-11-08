@@ -125,7 +125,7 @@ let g:airline#extensions#tabline#enabled = 1
 " Conquer of Completion {{{
 
 " Install extensions
-let g:coc_global_extensions=[ 'coc-cssmodules', 'coc-prettier', 'coc-css', 'coc-tsserver', 'coc-omnisharp', 'coc-eslint', 'coc-svg', 'coc-svelte']
+let g:coc_global_extensions=[ 'coc-cssmodules', 'coc-prettier', 'coc-css', 'coc-tsserver', 'coc-omnisharp', 'coc-eslint', 'coc-svg', 'coc-svelte', '@yaegassy/coc-tailwindcss3']
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -268,4 +268,17 @@ let g:languagetool_jar = '/usr/local/Cellar/languagetool/4.9.1/libexec/languaget
 " NERDTree {{{
 " Fix incresing of command line size
 let g:NERDTreeMinimalMenu=1
+" }}}
+
+" vim-ai {{{
+" set default model and temperature
+let g:vim_ai_chat = {
+\  "options": {
+\    "model": "gpt-4o",
+\    "max_tokens": 1000,
+\    "temperature": 0.5,
+\  }
+\}
+
+let g:vim_ai_roles_config_file = 'Library/Mobile Documents/com~apple~CloudDocs/AI'
 " }}}
