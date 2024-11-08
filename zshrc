@@ -84,9 +84,9 @@ fi
 export DEFAULT_USER=$(whoami)
 
 # Asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
-. ~/.asdf/plugins/java/set-java-home.zsh
-. ~/.asdf/plugins/dotnet-core/set-dotnet-home.zsh
+. $(brew --prefix asdf)/libexec/asdf.sh
+. ~/.asdf/plugins/java/set-java-home.zsh 2>/dev/null
+. ~/.asdf/plugins/dotnet-core/set-dotnet-home.zsh 2>/dev/null
 
 # Secrets
-. ~/.secrets.sh
+. ~/.secrets.sh 2>/dev/null
