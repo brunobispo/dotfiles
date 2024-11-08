@@ -1,5 +1,15 @@
+Dependencies
+------------
+
+* Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
 Install
 -------
+
+Install Homebrew-based dependencies:
+
+	brew install --cask kitty
+	brew install gcc zsh oh-my-zsh asdf python3 luarocks ripgrep nvim tmux
 
 Clone onto your home directory
 
