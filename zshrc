@@ -89,4 +89,4 @@ export DEFAULT_USER=$(whoami)
 . ~/.asdf/plugins/dotnet-core/set-dotnet-home.zsh 2>/dev/null
 
 # Secrets
-. ~/.secrets.sh 2>/dev/null
+. ~/.secrets.sh 2>/dev/null || true
