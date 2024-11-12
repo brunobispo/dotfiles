@@ -88,5 +88,10 @@ export DEFAULT_USER=$(whoami)
 . ~/.asdf/plugins/java/set-java-home.zsh 2>/dev/null
 . ~/.asdf/plugins/dotnet-core/set-dotnet-home.zsh 2>/dev/null
 
+# Android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # Secrets
 . ~/.secrets.sh 2>/dev/null || true
