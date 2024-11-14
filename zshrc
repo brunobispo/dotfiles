@@ -94,4 +94,4 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Secrets
-. ~/.secrets.sh 2>/dev/null || true
+. ~/.secrets 2>/dev/null || true
