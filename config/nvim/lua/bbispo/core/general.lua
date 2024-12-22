@@ -20,3 +20,4 @@ vim.opt.timeout = false
 vim.opt.mouse = "a"
 vim.opt.showmode = false
 vim.opt.foldmethod = "marker"
+vim.o.cursorline = true
