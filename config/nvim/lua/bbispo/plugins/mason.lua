@@ -17,40 +17,16 @@ return {
 		})
 		require("mason-lspconfig").setup()
 		require("mason-lspconfig").setup_handlers({
-			-- The first entry (without a key) will be the default handler
-			-- and will be called for each installed server that doesn't have
-			-- a dedicated handler.
 			function(server_name) -- default handler (optional)
-				local capabilities = vim.lsp.protocol.make_client_capabilities()
-				capabilities.textDocument.completion.completionItem.snippetSupport = true
-
+				local capabilities = require("cmp_nvim_lsp").default_capabilities()
 				require("lspconfig")[server_name].setup({
 					capabilities = capabilities,
 				})
 			end,
-			-- Next, you can provide a dedicated handler for specific servers.
-			-- ["html"] = function()
-			--   local capabilities = vim.lsp.protocol.make_client_capabilities()
-			--   capabilities.textDocument.completion.completionItem.snippetSupport = true
-			--
-			--   -- local general_on_attach = function(client, bufnr)
-			--   --   if client.resolved_capabilities.completion then
-			--   --     require("completion").on_attach(client, bufnr)
-			--   --   end
-			--   -- end
-			--
-			--   require('lspconfig').html.setup({
-			--     -- Add capabilities
-			--     -- on_attach = general_on_attach
-			--   })
-			-- end,
-			-- ["cssls"] = function()
-			--   local capabilities = vim.lsp.protocol.make_client_capabilities()
-			--   capabilities.textDocument.completion.completionItem.snippetSupport = true
-			--   require('lspconfig').cssls.setup({ capabilities = capabilities, })
-			-- end,
 			["ts_ls"] = function()
+				local capabilities = require("cmp_nvim_lsp").default_capabilities()
 				require("lspconfig").ts_ls.setup({
+					capabilities = capabilities,
 					init_options = {
 						maxTsServerMemory = 16384,
 						preferences = {
@@ -62,7 +38,9 @@ return {
 				})
 			end,
 			["lua_ls"] = function()
+				local capabilities = require("cmp_nvim_lsp").default_capabilities()
 				require("lspconfig").lua_ls.setup({
+					capabilities = capabilities,
 					settings = {
 						Lua = {
 							runtime = {
