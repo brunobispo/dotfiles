@@ -1,4 +1,9 @@
+export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='nvim'
+
+# Oh My Zsh
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
 
 # Theme
 eval "$(oh-my-posh init zsh --config '~/.bbispo.omp.json')"
@@ -12,9 +17,6 @@ eval "$(oh-my-posh init zsh --config '~/.bbispo.omp.json')"
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# Git utils
-. ~/.git.zsh
 
 # Secrets
 . ~/.secrets 2>/dev/null || true
