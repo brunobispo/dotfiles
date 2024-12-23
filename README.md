@@ -7,7 +7,8 @@
 Install Homebrew-based dependencies:
 
     brew install --cask kitty
-    brew install gcc zsh oh-my-zsh asdf python3 luarocks ripgrep live-grep nvim tmux font-agave-nerd-font
+    brew tap epk/epk
+    brew install gcc zsh jandedobbeleer/oh-my-posh/oh-my-posh asdf python3 luarocks ripgrep live-grep nvim tmux font-sf-mono-nerd-font
 
 Clone onto your home directory
 
