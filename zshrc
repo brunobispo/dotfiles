@@ -1,3 +1,5 @@
+export EDITOR='nvim'
+
 # Theme
 eval "$(oh-my-posh init zsh --config '~/.bbispo.omp.json')"
 
