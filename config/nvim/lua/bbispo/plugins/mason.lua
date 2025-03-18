@@ -14,17 +14,30 @@ return {
 					package_uninstalled = "✗",
 				},
 			},
+			ensure_installed = {
+				"graphql-language-service-cli",
+			},
 		})
-		require("mason-lspconfig").setup()
+
+		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+		capabilities.textDocument.foldingRange = {
+			dynamicRegistration = false,
+			lineFoldingOnly = true,
+		}
+
+		require("mason-lspconfig").setup({
+			automatic_installation = true,
+			ensure_installed = {
+				"graphql",
+			},
+		})
 		require("mason-lspconfig").setup_handlers({
 			function(server_name) -- default handler (optional)
-				local capabilities = require("cmp_nvim_lsp").default_capabilities()
 				require("lspconfig")[server_name].setup({
 					capabilities = capabilities,
 				})
 			end,
 			["ts_ls"] = function()
-				local capabilities = require("cmp_nvim_lsp").default_capabilities()
 				require("lspconfig").ts_ls.setup({
 					capabilities = capabilities,
 					init_options = {
@@ -33,12 +46,12 @@ return {
 							importModuleSpecifierPreference = "non-relative",
 							importModuleSpecifierEnding = "minimal",
 							disableAutomaticTypingAcquisition = true,
+							includeCompletionsForModuleExports = false,
 						},
 					},
 				})
 			end,
 			["lua_ls"] = function()
-				local capabilities = require("cmp_nvim_lsp").default_capabilities()
 				require("lspconfig").lua_ls.setup({
 					capabilities = capabilities,
 					settings = {
@@ -64,6 +77,17 @@ return {
 								enable = false,
 							},
 						},
+					},
+				})
+			end,
+			["graphql"] = function()
+				local lspconfig = require("lspconfig")
+				lspconfig.graphql.setup({
+					capabilities = capabilities,
+					filetypes = { "graphql", "javascript", "typescript", "javascriptreact", "typescriptreact" },
+					root_dir = lspconfig.util.root_pattern(".graphqlconfig", ".graphqlrc", "package.json"),
+					flags = {
+						debounce_text_changes = 150,
 					},
 				})
 			end,
