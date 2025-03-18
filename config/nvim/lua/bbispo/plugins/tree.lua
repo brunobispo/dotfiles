@@ -5,6 +5,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
 		"MunifTanjim/nui.nvim",
+		"antosha417/nvim-lsp-file-operations",
 		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	},
 	config = function()
@@ -40,5 +41,7 @@ return {
 
 		vim.keymap.set("n", "<leader>\\", ":Neotree toggle<cr>", { noremap = true })
 		vim.keymap.set("n", "<leader>|", ":Neotree reveal=true<cr>", { noremap = true })
+
+		require("lsp-file-operations").setup()
 	end,
 }
