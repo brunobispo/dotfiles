@@ -36,7 +36,7 @@ return {
 			local package = vim.fn.json_decode(vim.fn.readfile(package_json))
 			if package and package.devDependencies and package.devDependencies["@biomejs/biome"] then
 				for _, ft in ipairs({ "javascript", "typescript", "javascriptreact", "typescriptreact" }) do
-					formatters_by_ft[ft] = { "biome" }
+					-- formatters_by_ft[ft] = { "biome" }
 				end
 			end
 		end

@@ -1,6 +1,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='nvim'
 
+alias nvim="ASDF_NODEJS_VERSION=23.10.0 /opt/homebrew/bin/nvim"
+
 # Oh My Zsh
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
@@ -20,3 +22,5 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Secrets
 . ~/.secrets 2>/dev/null || true
+
+. "$HOME/.local/bin/env"
