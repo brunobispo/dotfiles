@@ -13,22 +13,22 @@ return {
   config = function()
     local conform = require("conform")
 
-    local formatters_by_ft = {
-      javascript = { "prettier" },
-      typescript = { "prettier" },
-      javascriptreact = { "prettier" },
-      typescriptreact = { "prettier" },
-      svg = { "prettier" },
-      svelte = { "prettier" },
-      css = { "prettier" },
-      html = { "prettier" },
-      json = { "prettier" },
-      yaml = { "prettier" },
-      markdown = { "prettier" },
-      graphql = { "prettier" },
-      lua = { "stylua" },
-      python = { "isort", "black" },
-    }
+		local formatters_by_ft = {
+			javascript = { "prettier" },
+			typescript = { "prettier" },
+			javascriptreact = { "prettier" },
+			typescriptreact = { "prettier" },
+			svg = { "prettier" },
+			svelte = { "prettier" },
+			css = { "prettier" },
+			html = { "prettier" },
+			json = { "prettier" },
+			yaml = { "prettier" },
+			markdown = { "prettier" },
+			graphql = { "prettier" },
+			lua = { "stylua" },
+			python = { "isort", "black" },
+		}
 
     -- use biome if it's in package.json
     local package_json = vim.fn.getcwd() .. "/package.json"
