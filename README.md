@@ -11,7 +11,7 @@ Install Homebrew-based dependencies:
     brew install gcc \
                  zsh zsh-completions jandedobbeleer/oh-my-posh/oh-my-posh \
                  asdf \
-                 nvim python3 luarocks ripgrep live-grep \
+                 nvim python3 luarocks ripgrep \
                  tmux
 
 Clone onto your home directory
