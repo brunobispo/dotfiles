@@ -16,6 +16,8 @@ return {
       },
       ensure_installed = {
         "graphql-language-service-cli",
+        "eslint-lsp",
+        "prettier"
       },
     })
 
