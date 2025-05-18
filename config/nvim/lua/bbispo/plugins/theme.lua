@@ -11,6 +11,12 @@ return {
           -- crust = "#121212",
         },
       },
+      integrations = {
+        telescope = {
+          enabled = true,
+          style = "nvchad"
+        }
+      }
     })
     vim.cmd.colorscheme "catppuccin"
   end,
