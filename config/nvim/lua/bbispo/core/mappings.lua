@@ -10,3 +10,9 @@ vim.keymap.set("i", "<esc>", "<nop>", { noremap = true })
 
 -- clean search highlights
 vim.keymap.set("n", "<leader>/", ":nohlsearch<cr>", { noremap = true })
+
+-- reload nvim config
+vim.keymap.set("n", "<leader>rv", function()
+  vim.cmd("luafile $MYVIMRC")
+  print("Nvim config reloaded!")
+end, { noremap = true, desc = "Reload nvim config" })
