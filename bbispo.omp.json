@@ -14,7 +14,7 @@
         {
           "foreground": "p:pink",
           "properties": {
-            "folder_icon": "..\ue5fe..",
+            "folder_icon": "..",
             "home_icon": "~",
             "style": "agnoster_short"
           },
