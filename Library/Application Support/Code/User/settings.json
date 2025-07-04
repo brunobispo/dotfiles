@@ -14,8 +14,30 @@
       "commands": ["editor.action.formatDocument"]
     },
     {
+      "before": ["<leader>", "|"],
+      "commands": ["workbench.files.action.showActiveFileInExplorer"]
+    },
+    {
+      "before": ["<leader>", "\\"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
       "before": ["<leader>", "P"],
-      "commands": ["workbench.files.action.focusFilesExplorer"]
+      "commands": ["workbench.action.openRecent"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<leader>", "a", "a"],
+      "commands": ["github.copilot.chat.attachSelection"]
     }
   ],
   "[jsonc]": {
