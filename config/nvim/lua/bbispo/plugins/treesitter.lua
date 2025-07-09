@@ -8,7 +8,7 @@ return {
 		---@diagnostic disable-next-line: missing-fields
 		configs.setup({
 			highlight = { enable = true },
-			ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "css", "html", "tsx", "typescript" },
+			ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "css", "html", "tsx", "typescript", "graphql" },
 		})
 	end,
 }
